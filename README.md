@@ -1,3 +1,13 @@
+![**Maatify.dev**](https://www.maatify.dev/assets/img/img/maatify_logo_white.svg)
+---
+[![Current Version](https://img.shields.io/packagist/v/maatify/psr-logger)](https://packagist.org/packages/maatify/psr-logger)
+[![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/maatify/psr-logger)](https://packagist.org/packages/maatify/psr-logger)
+[![Monthly Downloads](https://img.shields.io/packagist/dm/maatify/psr-logger)](https://packagist.org/packages/maatify/psr-logger/stats)
+[![Total Downloads](https://img.shields.io/packagist/dt/maatify/psr-logger)](https://packagist.org/packages/maatify/psr-logger/stats)
+[![License](https://img.shields.io/packagist/l/maatify/psr-logger)](https://github.com/MaatifyDev/maatify-psr-logger/blob/main/LICENSE)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/MaatifyDev/maatify-psr-logger/tests.yml?label=tests)](https://github.com/MaatifyDev/maatify-psr-logger/actions)
+[![Code Quality](https://img.shields.io/codefactor/grade/github/MaatifyDev/maatify-psr-logger/main)](https://www.codefactor.io/repository/github/MaatifyDev/maatify-psr-logger)
+
 # 🧾 maatify/psr-logger
 
 A **PSR-3 compatible logger** powered by **Monolog**,
