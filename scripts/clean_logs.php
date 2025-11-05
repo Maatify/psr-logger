@@ -32,22 +32,7 @@ declare(strict_types=1);
  * - If installed inside `vendor/maatify/psr-logger`, move 3 levels up to reach project root.
  * - If running standalone (for development or testing), move one level up from /scripts.
  */
-$vendorPos = strpos(__DIR__, '/vendor/');
-
-if ($vendorPos !== false) {
-    // 🧩 Library used inside a project
-    $baseDir = dirname(__DIR__, 3);
-} else {
-    // 🧪 Standalone development mode
-    $baseDir = dirname(__DIR__);
-}
-
-// Autoload dependencies (project or library scope)
-$autoloadPath = file_exists($baseDir . '/vendor/autoload.php')
-    ? $baseDir . '/vendor/autoload.php'
-    : __DIR__ . '/../vendor/autoload.php';
-
-require $autoloadPath;
+$baseDir = getDirname();
 
 use Dotenv\Dotenv;
 use Maatify\PsrLogger\Rotation\LogCleaner;

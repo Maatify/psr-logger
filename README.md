@@ -222,8 +222,9 @@ $logger->error('Something went wrong', ['code' => 500]);
 
 ## 🧾 License
 
-**MIT License** © [Maatify.dev](https://www.maatify.dev)
+**[MIT license](LICENSE)** © [Maatify.dev](https://www.maatify.dev)
 
 You’re free to use, modify, and distribute this library with attribution.
+
 
 ---

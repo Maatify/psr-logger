@@ -17,6 +17,7 @@ use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 use Maatify\PsrLogger\Helpers\PathHelper;
 use Psr\Log\LoggerInterface;
+use Psr\Log\LogLevel;
 
 /**
  * Class LoggerFactory
@@ -78,7 +79,7 @@ final class LoggerFactory
 
         // Initialize Monolog logger with StreamHandler
         $logger = new Logger($context);
-        $logger->pushHandler(new StreamHandler($path, Logger::DEBUG));
+        $logger->pushHandler(new StreamHandler($path, LogLevel::DEBUG));
 
         return $logger;
     }
