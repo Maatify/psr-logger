@@ -78,8 +78,8 @@ final class LogCleaner
      */
     public static function cleanOldLogs(): void
     {
-        $basePath = $_ENV['LOG_PATH'] ?? __DIR__ . '/../../../storage/logs';
-        $retentionDays = (int)($_ENV['LOG_RETENTION_DAYS'] ?? 7);
+        $basePath = getenv('LOG_PATH') ? : ($_ENV['LOG_PATH'] ?? __DIR__ . '/../../../storage/logs');
+        $retentionDays = (int)(getenv('LOG_RETENTION_DAYS') ? :  ($_ENV['LOG_RETENTION_DAYS'] ?? 7));
 
         if (!is_dir($basePath)) {
             return;
