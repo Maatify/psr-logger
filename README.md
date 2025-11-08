@@ -151,28 +151,34 @@ composer logs:clean
 | `LOG_PATH`           | `storage/logs` | Base directory for log files                  |
 | `LOG_RETENTION_DAYS` | `14`           | Number of days to keep logs (used by cleanup) |
 
-
-### 🌿 Environment Loading
-
-This package includes [**vlucas/phpdotenv**](https://github.com/vlucas/phpdotenv) for automatic environment variable loading.
-If your project contains a `.env` file at the root, all variables (like `LOG_PATH` and `LOG_RETENTION_DAYS`)
-will be automatically loaded into `getenv()` and `$_ENV` before the logger initializes.
-
-Example:
+Example `.env` file:
 
 ```bash
 LOG_PATH=storage/logs
 LOG_RETENTION_DAYS=14
 ```
+### 🌿 Optional: Environment Initialization
 
-The logger automatically detects these values:
+This package ships with [**vlucas/phpdotenv**](https://github.com/vlucas/phpdotenv)  
+to simplify environment configuration management.
+
+> The logger itself **does not automatically load** your `.env` file.
+> You should initialize it at the project level before using the logger.
+
+Example:
 
 ```php
-$basePath = getenv('LOG_PATH') ?: ($_ENV['LOG_PATH'] ?? __DIR__ . '/../../../storage/logs');
+use Dotenv\Dotenv;
+use Maatify\PsrLogger\LoggerFactory;
+
+require __DIR__ . '/vendor/autoload.php';
+
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->safeLoad();
+
+$logger = LoggerFactory::create('bootstrap/test');
+$logger->info('Logger initialized successfully!');
 ```
-
-> 💡 You don't need to manually call `Dotenv::createImmutable()` — the library does it for you internally.
-
 ---
 
 ## 🧭 Project Root Detection
