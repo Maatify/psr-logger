@@ -16,6 +16,15 @@ Built for professional PHP projects that need organized, flexible, and standards
 
 ---
 
+### 🧱 Built on Monolog
+
+This package is powered by [**Monolog v3**](https://github.com/Seldaek/monolog) —
+the industry-standard logging library for PHP.
+It extends Monolog with **automatic path detection**, **hourly rotation**, and **project-aware file structure**,
+making it ideal for scalable and professional PHP applications.
+
+---
+
 ## 📦 Installation
 
 Install via Composer:
