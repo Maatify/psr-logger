@@ -151,12 +151,27 @@ composer logs:clean
 | `LOG_PATH`           | `storage/logs` | Base directory for log files                  |
 | `LOG_RETENTION_DAYS` | `14`           | Number of days to keep logs (used by cleanup) |
 
-Example `.env` file:
+
+### 🌿 Environment Loading
+
+This package includes [**vlucas/phpdotenv**](https://github.com/vlucas/phpdotenv) for automatic environment variable loading.
+If your project contains a `.env` file at the root, all variables (like `LOG_PATH` and `LOG_RETENTION_DAYS`)
+will be automatically loaded into `getenv()` and `$_ENV` before the logger initializes.
+
+Example:
 
 ```bash
 LOG_PATH=storage/logs
 LOG_RETENTION_DAYS=14
 ```
+
+The logger automatically detects these values:
+
+```php
+$basePath = getenv('LOG_PATH') ?: ($_ENV['LOG_PATH'] ?? __DIR__ . '/../../../storage/logs');
+```
+
+> 💡 You don't need to manually call `Dotenv::createImmutable()` — the library does it for you internally.
 
 ---
 
