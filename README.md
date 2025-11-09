@@ -277,7 +277,6 @@ $logger->error('Something went wrong', ['code' => 500]);
 | **[monolog/monolog](https://github.com/Seldaek/monolog)**   | Industry-standard PHP logging library (v3) | Core logging engine used for structured logging, channel management, and handler pipeline.    |
 | **[psr/log](https://www.php-fig.org/psr/psr-3/)**           | PSR-3 logging interface                    | Defines the standardized logger interface used by all Maatify components.                     |
 | **[vlucas/phpdotenv](https://github.com/vlucas/phpdotenv)** | Environment configuration manager          | Loads and manages environment variables for dynamic log paths and environment detection.      |
-| **[maatify/common](https://github.com/Maatify/common)**     | Shared helper utilities and path resolvers | Provides helper classes for file path normalization, directory creation, and text formatting. |
 | **[phpunit/phpunit](https://phpunit.de)**                   | PHP unit testing framework                 | Powers the automated test suite and CI/CD validation through GitHub Actions.                  |
 
 > Huge thanks to the open-source community for their continued contributions,
@@ -285,11 +284,26 @@ $logger->error('Something went wrong', ['code' => 500]);
 
 ---
 
-## 🧾 License
+## 🪪 License
 
-**[MIT license](LICENSE)** © [Maatify.dev](https://www.maatify.dev)
-
+**[MIT license](LICENSE)** © [Maatify.dev](https://www.maatify.dev)  
 You’re free to use, modify, and distribute this library with attribution.
 
-
 ---
+
+## 🧱 Authors & Credits
+
+This library is part of the **Maatify.dev Core Ecosystem**, designed and maintained under the technical supervision of:
+
+**👤 Mohamed Abdulalim** — *Backend Lead & Technical Architect*  
+Lead architect of the **Maatify Backend Infrastructure**, responsible for the overall architecture, core library design,  
+and technical standardization across all backend modules within the Maatify ecosystem.  
+🔗 [www.Maatify.dev](https://www.maatify.dev) | ✉️ [mohamed@maatify.dev](mailto:mohamed@maatify.dev)
+
+**🤝 Contributors:**  
+The **Maatify.dev Engineering Team** and open-source collaborators who continuously help refine, test, and extend  
+the capabilities of this library across multiple Maatify projects.
+
+> 🧩 This project represents a unified engineering effort led by Mohamed Abdulalim, ensuring every Maatify backend component  
+> shares a consistent, secure, and maintainable foundation.
+
