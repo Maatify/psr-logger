@@ -35,6 +35,24 @@ composer require maatify/psr-logger
 
 ---
 
+
+### 📦 Dependencies
+
+This library relies on:
+
+| Dependency           | Purpose                                                    | Link                                                               |
+|----------------------|------------------------------------------------------------|--------------------------------------------------------------------|
+| **monolog/monolog**  | Core logging framework for PHP (v3)                        | [github.com/Seldaek/monolog](https://github.com/Seldaek/monolog)   |
+| **psr/log**          | PSR-3 compliant interface for logging interoperability     | [php-fig.org/psr/psr-3](https://www.php-fig.org/psr/psr-3/)        |
+| **vlucas/phpdotenv** | Environment variable management for dynamic log paths      | [github.com/vlucas/phpdotenv](https://github.com/vlucas/phpdotenv) |
+| **phpunit/phpunit**  | Unit testing framework (development only)                  | [phpunit.de](https://phpunit.de)                                   |
+
+> 🧱 `maatify/psr-logger` builds upon these open-source libraries to provide a **unified**,
+> **context-aware**, and **developer-friendly** logging experience across all Maatify packages.
+
+
+---
+
 ## ⚙️ Features
 
 - ✅ PSR-3 compatible (`Psr\Log\LoggerInterface`)
@@ -247,6 +265,23 @@ use Maatify\PsrLogger\LoggerFactory;
 $logger = LoggerFactory::create('custom/project');
 $logger->error('Something went wrong', ['code' => 500]);
 ```
+
+---
+
+## 📚 Built Upon
+
+`maatify/psr-logger` proudly builds upon several mature and industry-standard open-source foundations:
+
+| Library                                                     | Description                                | Usage in Project                                                                              |
+| ----------------------------------------------------------- | ------------------------------------------ | --------------------------------------------------------------------------------------------- |
+| **[monolog/monolog](https://github.com/Seldaek/monolog)**   | Industry-standard PHP logging library (v3) | Core logging engine used for structured logging, channel management, and handler pipeline.    |
+| **[psr/log](https://www.php-fig.org/psr/psr-3/)**           | PSR-3 logging interface                    | Defines the standardized logger interface used by all Maatify components.                     |
+| **[vlucas/phpdotenv](https://github.com/vlucas/phpdotenv)** | Environment configuration manager          | Loads and manages environment variables for dynamic log paths and environment detection.      |
+| **[maatify/common](https://github.com/Maatify/common)**     | Shared helper utilities and path resolvers | Provides helper classes for file path normalization, directory creation, and text formatting. |
+| **[phpunit/phpunit](https://phpunit.de)**                   | PHP unit testing framework                 | Powers the automated test suite and CI/CD validation through GitHub Actions.                  |
+
+> Huge thanks to the open-source community for their continued contributions,
+> enabling Maatify to build reliable, scalable, and developer-friendly PHP infrastructure. ❤️
 
 ---
 
