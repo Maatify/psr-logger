@@ -273,7 +273,7 @@ $logger->error('Something went wrong', ['code' => 500]);
 `maatify/psr-logger` proudly builds upon several mature and industry-standard open-source foundations:
 
 | Library                                                     | Description                                | Usage in Project                                                                              |
-| ----------------------------------------------------------- | ------------------------------------------ | --------------------------------------------------------------------------------------------- |
+|-------------------------------------------------------------|--------------------------------------------|-----------------------------------------------------------------------------------------------|
 | **[monolog/monolog](https://github.com/Seldaek/monolog)**   | Industry-standard PHP logging library (v3) | Core logging engine used for structured logging, channel management, and handler pipeline.    |
 | **[psr/log](https://www.php-fig.org/psr/psr-3/)**           | PSR-3 logging interface                    | Defines the standardized logger interface used by all Maatify components.                     |
 | **[vlucas/phpdotenv](https://github.com/vlucas/phpdotenv)** | Environment configuration manager          | Loads and manages environment variables for dynamic log paths and environment detection.      |
