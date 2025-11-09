@@ -19,7 +19,7 @@ Built for professional PHP projects that need organized, flexible, and standards
 ### 🧱 Built on Monolog
 
 This package is powered by [**Monolog v3**](https://github.com/Seldaek/monolog) —
-the industry-standard logging library for PHP.
+the industry-standard logging library for PHP.  
 It extends Monolog with **automatic path detection**, **hourly rotation**, and **project-aware file structure**,
 making it ideal for scalable and professional PHP applications.
 
@@ -286,24 +286,25 @@ $logger->error('Something went wrong', ['code' => 500]);
 
 ## 🪪 License
 
-**[MIT license](LICENSE)** © [Maatify.dev](https://www.maatify.dev)  
-You’re free to use, modify, and distribute this library with attribution.
+**[MIT License](LICENSE)** © [Maatify.dev](https://www.maatify.dev)  
+You’re free to use, modify, and distribute this library with proper attribution.
 
 ---
 
-## 🧱 Authors & Credits
+## 👥 Authors & Credits
 
-This library is part of the **Maatify.dev Core Ecosystem**, designed and maintained under the technical supervision of:
+This library is part of the **Maatify.dev Core Ecosystem**, developed and maintained under the technical leadership of:
 
 **👤 Mohamed Abdulalim** — *Backend Lead & Technical Architect*  
-Lead architect of the **Maatify Backend Infrastructure**, responsible for the overall architecture, core library design,  
+Lead architect of the **Maatify Backend Infrastructure**, overseeing the architecture, core library design,
 and technical standardization across all backend modules within the Maatify ecosystem.  
-🔗 [www.Maatify.dev](https://www.maatify.dev) | ✉️ [mohamed@maatify.dev](mailto:mohamed@maatify.dev)
+🔗 [Maatify.dev](https://www.maatify.dev)  |  ✉️ [mohamed@maatify.dev](mailto:mohamed@maatify.dev)
 
-**🤝 Contributors:**  
-The **Maatify.dev Engineering Team** and open-source collaborators who continuously help refine, test, and extend  
+**🤝 Contributors**  
+The **Maatify.dev Engineering Team** and open-source collaborators who continuously refine, test, and extend
 the capabilities of this library across multiple Maatify projects.
 
-> 🧩 This project represents a unified engineering effort led by Mohamed Abdulalim, ensuring every Maatify backend component  
-> shares a consistent, secure, and maintainable foundation.
+> 🧩 This project represents a unified engineering effort led by Mohamed Abdulalim, ensuring that every Maatify backend component
+> adheres to the same secure, consistent, and maintainable foundation.
 
+---
