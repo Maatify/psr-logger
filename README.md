@@ -1,5 +1,9 @@
 ![**Maatify.dev**](https://www.maatify.dev/assets/img/img/maatify_logo_white.svg)
+
 ---
+
+# 🧾 maatify/psr-logger
+
 [![Current Version](https://img.shields.io/packagist/v/maatify/psr-logger)](https://packagist.org/packages/maatify/psr-logger)
 [![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/maatify/psr-logger)](https://packagist.org/packages/maatify/psr-logger)
 [![Monthly Downloads](https://img.shields.io/packagist/dm/maatify/psr-logger)](https://packagist.org/packages/maatify/psr-logger/stats)
@@ -9,7 +13,7 @@
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/Maatify/psr-logger/ci.yml?label=tests)](https://github.com/Maatify/psr-logger/actions)
 [![Code Quality](https://img.shields.io/codefactor/grade/github/Maatify/psr-logger/main)](https://www.codefactor.io/repository/github/Maatify/psr-logger)
 
-# 🧾 maatify/psr-logger
+---
 
 A **PSR-3 compatible logger** powered by **Monolog**,
 supporting **dynamic file naming**, **hourly log rotation**, and **project-aware path detection**.
