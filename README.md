@@ -15,6 +15,8 @@ A **PSR-3 compatible logger** powered by **Monolog**,
 supporting **dynamic file naming**, **hourly log rotation**, and **project-aware path detection**.
 Built for professional PHP projects that need organized, flexible, and standards-compliant logging.
 
+> 🔗 [بالعربي 🇸🇦 ](./README-AR.md)
+
 ---
 
 ### 🧱 Built on Monolog
