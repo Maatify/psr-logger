@@ -343,6 +343,19 @@ $logger->error('Something went wrong', ['code' => 500]);
 
 ---
 
+## 🔗 Documentation & Resources
+
+| File                                    | Description                                               |
+|-----------------------------------------|-----------------------------------------------------------|
+| [📘 CHANGELOG.md](./CHANGELOG.md)       | Version history and release notes                         |
+| [📄 LICENSE](./LICENSE)                 | Project license (MIT)                                     |
+| [📦 composer.json](./composer.json)     | Package metadata and dependencies                         |
+| [🧱 CONTRIBUTING.md](./CONTRIBUTING.md) | Contribution and coding standards                         |
+| [🧾 VERSION](./VERSION)                 | Current release version                                   |
+
+---
+
+
 ## 🪪 License
 
 **[MIT License](LICENSE)** © [Maatify.dev](https://www.maatify.dev)  
