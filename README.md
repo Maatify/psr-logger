@@ -85,11 +85,9 @@ Resulting file:
 storage/logs/2025/11/05/10/services/payment.log
 ```
 
----
+### ⚙️ Auto Context Detection (Class-based Logging)
 
-### Auto Context Detection
-
-Automatically uses the calling class name as the log context:
+Automatically detects and uses the calling class name as the logging context — no need to specify it manually.
 
 ```php
 use Maatify\PsrLogger\Traits\LoggerContextTrait;
@@ -100,11 +98,69 @@ class UserService
 
     public function __construct()
     {
-        $this->initLogger(); // auto: logs/UserService.log
-        $this->logger->info('User service initialized');
+        // Option 1️⃣ — Initialize once and use via $this->logger
+        $this->initLogger(); // auto context → logs/UserService.log
+        $this->logger->info('User service initialized.');
+
+        // Option 2️⃣ — (New in v1.0.1) Get the logger instance directly
+        $logger = $this->initLogger('services/user');
+        $logger->debug('Inline logger usage example.');
     }
 }
 ```
+
+**Resulting files:**
+
+```
+storage/logs/2025/11/05/10/UserService.log
+storage/logs/2025/11/05/10/services/user.log
+```
+
+---
+
+### 🧱 Custom Context Example
+
+You can override the automatic context by specifying a custom path or namespace.
+This is useful for grouping logs by module or feature (e.g., `services/payment`, `queue/worker`, etc.).
+
+```php
+use Maatify\PsrLogger\Traits\LoggerContextTrait;
+
+class PaymentProcessor
+{
+    use LoggerContextTrait;
+
+    public function __construct()
+    {
+        // Initialize logger with a custom context
+        $this->initLogger('services/payment');
+        $this->logger->info('Payment processor initialized.');
+    }
+
+    public function process(int $orderId): void
+    {
+        // Direct inline usage — available since v1.0.1
+        $logger = $this->initLogger('services/payment/process');
+        $logger->info('Processing order', ['order_id' => $orderId]);
+    }
+}
+```
+
+**Resulting file:**
+
+```
+storage/logs/2025/11/05/10/services/payment/process.log
+```
+
+---
+
+### 🧩 Summary
+
+| Mode                  | Description                                     | Example                                  | Since      |
+|-----------------------|-------------------------------------------------|------------------------------------------|------------|
+| **Factory-based**     | Create standalone logger                        | `LoggerFactory::create('context')`       | v1.0.0     |
+| **Trait (init-only)** | Initializes `$this->logger` for class-wide use  | `$this->initLogger()`                    | v1.0.0     |
+| **Trait (return)**    | Returns logger instance directly for inline use | `$logger = $this->initLogger('context')` | **v1.0.1** |
 
 ---
 

@@ -75,13 +75,23 @@ trait LoggerContextTrait
      *
      * @return LoggerInterface The initialized PSR-3 logger instance.
      *
+     * @since  v1.0.0
+     * @update v1.0.1  Method now returns the logger instance for direct usage.
+     *
+     * @see LoggerFactory::create()
      * ✅ **Example 1:**
+     * ```php
+     *  // Auto context
+     * *  $this->initLogger();
+     * ```
+     *
+     * ✅ **Example 2:**
      * ```php
      * $this->initLogger('api/v1/auth');
      * $this->logger->warning('Invalid login attempt.');
      * ```
      *
-     * ✅ **Example 2:**
+     * ✅ **Example 3:**
      * ```php
      * $logger = $this->initLogger('services/payment');
      * $logger->error('Payment gateway timeout.');
