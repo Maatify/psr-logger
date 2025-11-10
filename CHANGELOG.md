@@ -5,6 +5,32 @@ This project follows **[Semantic Versioning (SemVer)](https://semver.org/)**.
 
 ---
 
+## 🚀 v1.0.2 — 2025-11-10
+
+### 🧩 Feature: Add StaticLoggerTrait for Static PSR-3 Logging Support
+
+#### ✨ Added
+
+* Introduced **`StaticLoggerTrait`** to provide static classes with direct access to PSR-3 loggers.
+  Ideal for use in `Bootstrap`, utility, or facade-style classes.
+* Added **comprehensive PHPUnit coverage**:
+
+    * `tests/Mocks/MockStaticLogger.php` — reusable mock class for trait testing.
+    * `tests/Unit/StaticLoggerTraitTest.php` — validates PSR compliance, context isolation, and stability.
+* Ensures parity with **`LoggerContextTrait`** for instance-based logging consistency.
+
+#### 🔧 Improved
+
+* Unified documentation format and metadata headers across all trait files.
+* Enhanced consistency between static and instance-based logging workflows.
+
+#### 🧪 QA & Testing
+
+* Verified with PHP 8.4 and Maatify Common v1.0.1.
+* 100% test coverage maintained across `traits/` module.
+
+---
+
 ## 🏁 v1.0.1 — 2025-11-10
 
 ### ⚙️ Enhancement: Return LoggerInterface from initLogger() for Direct Use

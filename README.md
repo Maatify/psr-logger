@@ -154,6 +154,43 @@ storage/logs/2025/11/05/10/services/payment/process.log
 
 ---
 
+### ⚡ Static Logger for Utility & Bootstrap Classes (New in v1.0.2)
+
+When working with **static classes**, such as `Bootstrap`, `CronRunner`, or `FileLockManager`,
+you can now use the **StaticLoggerTrait** to obtain PSR-3 loggers without class instantiation.
+
+```php
+use Maatify\PsrLogger\Traits\StaticLoggerTrait;
+
+final class Bootstrap
+{
+    use StaticLoggerTrait;
+
+    public static function init(): void
+    {
+        $logger = self::getLogger('bootstrap/init');
+        $logger->info('Bootstrap initialized successfully');
+    }
+}
+````
+
+**Resulting file:**
+
+```
+storage/logs/2025/11/10/10/bootstrap/init.log
+```
+
+This makes it easy to integrate consistent logging even inside
+global initializers, CLI runners, or static utility helpers.
+
+---
+
+| Mode             | Description                           | Example                             | Since      |
+|------------------|---------------------------------------|-------------------------------------|------------|
+| **Static Trait** | For static classes (no instantiation) | `self::getLogger('bootstrap/init')` | **v1.0.2** |
+
+---
+
 ### 🧩 Summary
 
 | Mode                  | Description                                     | Example                                  | Since      |
