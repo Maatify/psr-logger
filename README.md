@@ -4,13 +4,14 @@
 
 # 🧾 maatify/psr-logger
 
-[![Current Version](https://img.shields.io/packagist/v/maatify/psr-logger)](https://packagist.org/packages/maatify/psr-logger)
-[![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/maatify/psr-logger)](https://packagist.org/packages/maatify/psr-logger)
-[![Monthly Downloads](https://img.shields.io/packagist/dm/maatify/psr-logger)](https://packagist.org/packages/maatify/psr-logger/stats)
-[![Total Downloads](https://img.shields.io/packagist/dt/maatify/psr-logger)](https://packagist.org/packages/maatify/psr-logger/stats)
-[![License](https://img.shields.io/packagist/l/maatify/psr-logger)](https://github.com/Maatify/psr-logger/blob/main/LICENSE)
+[![Version](https://img.shields.io/packagist/v/maatify/psr-logger?label=Version&color=4C1)](https://packagist.org/packages/maatify/psr-logger)
+[![PHP](https://img.shields.io/packagist/php-v/maatify/psr-logger?label=PHP&color=777BB3)](https://packagist.org/packages/maatify/psr-logger)
+[![Build](https://github.com/Maatify/psr-logger/actions/workflows/ci.yml/badge.svg?label=Build&color=brightgreen)](https://github.com/Maatify/psr-logger/actions/workflows/ci.yml)
+[![Monthly Downloads](https://img.shields.io/packagist/dm/maatify/psr-logger?label=Monthly%20Downloads&color=00A8E8)](https://packagist.org/packages/maatify/psr-logger)
+[![Total Downloads](https://img.shields.io/packagist/dt/maatify/psr-logger?label=Total%20Downloads&color=2AA)](https://packagist.org/packages/maatify/psr-logger)
+[![Stars](https://img.shields.io/github/stars/Maatify/psr-logger?label=Stars&color=FFD43B)](https://github.com/Maatify/psr-logger/stargazers)
+[![License](https://img.shields.io/github/license/Maatify/psr-logger?label=License&color=blueviolet)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Stable-success?style=flat-square)]()
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/Maatify/psr-logger/ci.yml?label=tests)](https://github.com/Maatify/psr-logger/actions)
 [![Code Quality](https://img.shields.io/codefactor/grade/github/Maatify/psr-logger/main)](https://www.codefactor.io/repository/github/Maatify/psr-logger)
 
 ---
