@@ -1,13 +1,14 @@
 <?php
 
 /**
- * Created by Maatify.dev
- * User: Maatify.dev
- * Date: 2025-11-05
- * Time: 08:32
- * Project: maatify:psr-logger
- * IDE: PhpStorm
- * https://www.Maatify.dev
+ * @copyright   ©2025 Maatify.dev
+ * @Liberary    maatify/psr-logger
+ * @Project     maatify:psr-logger
+ * @author      Mohamed Abdulalim (megyptm) <mohamed@maatify.dev>
+ * @since       2025-11-10 10:12
+ * @see         https://www.maatify.dev Maatify.com
+ * @link        https://github.com/Maatify/psr-logger  view project on GitHub
+ * @note        Distributed in the hope that it will be useful - WITHOUT WARRANTY.
  */
 
 declare(strict_types=1);
@@ -18,25 +19,29 @@ use Maatify\PsrLogger\LoggerFactory;
 use Psr\Log\LoggerInterface;
 
 /**
- * Trait LoggerContextTrait
+ * 🧩 **Trait LoggerContextTrait**
  *
- * Provides an easy and consistent way to initialize a PSR-3 compliant logger
- * within any class that uses this trait.
+ * 🎯 **Purpose:**
+ * Provides a lightweight, reusable way to initialize a PSR-3 compliant logger
+ * in any class — ensuring consistent logging standards across all Maatify projects.
  *
- * Features:
- *  - Automatically creates a logger instance via {@see LoggerFactory::create()}.
- *  - Supports custom or auto-detected logging contexts.
- *  - Exposes `$this->logger` as a ready-to-use property implementing `LoggerInterface`.
+ * 🧠 **Highlights:**
+ * - Automatically creates a logger instance via {@see LoggerFactory::create()}.
+ * - Supports optional `$context` to categorize or namespace log output.
+ * - Exposes `$this->logger` as a PSR-3 compliant logger ready for immediate use.
+ * - Encourages unified structured logging throughout the ecosystem.
  *
- * Typical use case:
+ * ✅ **Example Usage:**
  * ```php
+ * use Maatify\PsrLogger\Traits\LoggerContextTrait;
+ *
  * class ExampleService
  * {
  *     use LoggerContextTrait;
  *
  *     public function __construct()
  *     {
- *         $this->initLogger(); // Auto context detection
+ *         $this->initLogger(); // Auto-detect class context
  *     }
  *
  *     public function process(): void
@@ -45,36 +50,47 @@ use Psr\Log\LoggerInterface;
  *     }
  * }
  * ```
- *
- * @package Maatify\PsrLogger\Traits
  */
 trait LoggerContextTrait
 {
     /**
-     * PSR-3 compliant logger instance for the current class context.
+     * 🧱 **Logger Instance**
+     *
+     * Holds the initialized PSR-3 logger used by the consuming class.
+     * Accessible after calling {@see initLogger()}.
      *
      * @var LoggerInterface
      */
     protected LoggerInterface $logger;
 
     /**
-     * Initialize logger with optional custom context name.
+     * ⚙️ **Initialize Logger**
      *
-     * If `$context` is not provided, the logger context is automatically
-     * determined based on the calling class name (via {@see LoggerFactory::create()}).
+     * Creates a PSR-3 compliant logger instance using the `LoggerFactory`.
+     * If `$context` is omitted, it auto-detects one based on the calling class name.
      *
-     * @param string|null $context Optional custom context for log file path or naming.
+     * @param string|null $context Optional logging context
+     *                             (e.g. `"services/payment"` or `"api/v1/auth"`).
+     *                             Defines log file path or category.
      *
-     * @return void
+     * @return LoggerInterface The initialized PSR-3 logger instance.
      *
-     * @example
+     * ✅ **Example 1:**
      * ```php
-     * $this->initLogger('services/payment');
-     * $this->logger->error('Payment gateway timeout.');
+     * $this->initLogger('api/v1/auth');
+     * $this->logger->warning('Invalid login attempt.');
+     * ```
+     *
+     * ✅ **Example 2:**
+     * ```php
+     * $logger = $this->initLogger('services/payment');
+     * $logger->error('Payment gateway timeout.');
      * ```
      */
-    protected function initLogger(?string $context = null): void
+    protected function initLogger(?string $context = null): LoggerInterface
     {
+        // 🧩 Create logger using the central LoggerFactory for consistent configuration
         $this->logger = LoggerFactory::create($context);
+        return $this->logger;
     }
 }
