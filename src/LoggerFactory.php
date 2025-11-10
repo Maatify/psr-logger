@@ -1,21 +1,23 @@
 <?php
+
 /**
- * Created by Maatify.dev
- * User: Maatify.dev
- * Date: 2025-11-05
- * Time: 08:31
- * Project: maatify:psr-logger
- * IDE: PhpStorm
- * https://www.Maatify.dev
+ * @copyright   ©2025 Maatify.dev
+ * @Liberary    maatify/psr-logger
+ * @Project     maatify:psr-logger
+ * @author      Mohamed Abdulalim (megyptm) <mohamed@maatify.dev>
+ * @since       2025-11-05 08:31
+ * @see         https://www.maatify.dev Maatify.com
+ * @link        https://github.com/Maatify/psr-logger  view project on GitHub
+ * @note        Distributed in the hope that it will be useful - WITHOUT WARRANTY.
  */
 
 declare(strict_types=1);
 
 namespace Maatify\PsrLogger;
 
+use Maatify\PsrLogger\Helpers\PathHelper;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
-use Maatify\PsrLogger\Helpers\PathHelper;
 use Psr\Log\LoggerInterface;
 use Psr\Log\LogLevel;
 
@@ -47,10 +49,10 @@ final class LoggerFactory
      * detects the calling class name via `debug_backtrace()` and uses it
      * as the logging context (converted to path-friendly format).
      *
-     * @param string|null $context  Optional context name or namespace.
-     *                              If null, caller class is detected automatically.
+     * @param string|null $context Optional context name or namespace.
+     *                             If null, caller class is detected automatically.
      *
-     * @return LoggerInterface  PSR-3 compliant logger instance ready for use.
+     * @return LoggerInterface PSR-3 compliant logger instance ready for use.
      *
      * @example
      * ```php

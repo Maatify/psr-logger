@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by Maatify.dev
  * User: Maatify.dev
@@ -62,7 +63,7 @@ trait LoggerContextTrait
      * If `$context` is not provided, the logger context is automatically
      * determined based on the calling class name (via {@see LoggerFactory::create()}).
      *
-     * @param string|null $context  Optional custom context for log file path or naming.
+     * @param string|null $context Optional custom context for log file path or naming.
      *
      * @return void
      *

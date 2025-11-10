@@ -1,12 +1,14 @@
 <?php
+
 /**
- * Created by Maatify.dev
- * User: Maatify.dev
- * Date: 2025-11-05
- * Time: 08:29
- * Project: maatify:psr-logger
- * IDE: PhpStorm
- * https://www.Maatify.dev
+ * @copyright   ©2025 Maatify.dev
+ * @Liberary    maatify/psr-logger
+ * @Project     maatify:psr-logger
+ * @author      Mohamed Abdulalim (megyptm) <mohamed@maatify.dev>
+ * @since       2025-11-05 08:29
+ * @see         https://www.maatify.dev Maatify.com
+ * @link        https://github.com/Maatify/psr-logger  view project on GitHub
+ * @note        Distributed in the hope that it will be useful - WITHOUT WARRANTY.
  */
 
 declare(strict_types=1);
@@ -40,15 +42,15 @@ final class PathHelper
      * The structure is: `/Y/m/d/H/<context>.log`
      * Example: `/storage/logs/2025/11/05/08/app.log`
      *
-     * @param string $context  Log context name (e.g., "app", "auth/login", "repositories/customer").
-     *                         Non-alphanumeric characters are automatically sanitized.
+     * @param string $context Log context name (e.g., "app", "auth/login", "repositories/customer").
+     *                        Non-alphanumeric characters are automatically sanitized.
      *
-     * @return string  Absolute path to the generated log file.
+     * @return string Absolute path to the generated log file.
      */
     public static function buildPath(string $context = 'app'): string
     {
         // Base logs directory (from .env or default path)
-        $basePath = getenv('LOG_PATH') ? : ($_ENV['LOG_PATH'] ?? __DIR__ . '/../../../storage/logs');
+        $basePath = getenv('LOG_PATH') ?: ($_ENV['LOG_PATH'] ?? __DIR__ . '/../../../storage/logs');
 
         // Time-based subdirectory (Y/m/d/H)
         $datePath = date('Y/m/d/H');
