@@ -5,7 +5,8 @@
 [![Monthly Downloads](https://img.shields.io/packagist/dm/maatify/psr-logger)](https://packagist.org/packages/maatify/psr-logger/stats)
 [![Total Downloads](https://img.shields.io/packagist/dt/maatify/psr-logger)](https://packagist.org/packages/maatify/psr-logger/stats)
 [![License](https://img.shields.io/packagist/l/maatify/psr-logger)](https://github.com/Maatify/psr-logger/blob/main/LICENSE)
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/Maatify/psr-logger/tests.yml?label=tests)](https://github.com/MaatifyDev/psr-logger/actions)
+[![Status](https://img.shields.io/badge/Status-Stable-success?style=flat-square)]()
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/Maatify/psr-logger/tests.yml?label=tests)](https://github.com/Maatify/psr-logger/actions)
 [![Code Quality](https://img.shields.io/codefactor/grade/github/Maatify/psr-logger/main)](https://www.codefactor.io/repository/github/Maatify/psr-logger)
 
 # 🧾 maatify/psr-logger
