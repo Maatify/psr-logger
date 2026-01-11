@@ -50,7 +50,7 @@ final class PathHelper
     public static function buildPath(string $context = 'app'): string
     {
         // Base logs directory (from .env or default path)
-        $basePath = getenv('LOG_PATH') ?: ($_ENV['LOG_PATH'] ?? __DIR__ . '/../../../storage/logs');
+        $basePath = getenv('LOG_PATH') ?: ($_ENV['LOG_PATH'] ?? __DIR__ . '/../../../../storage/logs');
 
         // Time-based subdirectory (Y/m/d/H)
         $datePath = date('Y/m/d/H');

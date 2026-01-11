@@ -30,7 +30,7 @@
     }
   },
   "require": {
-    "php": "^8.4",
+    "php": "^8.2",
     "psr/log": "^3.0",
     "monolog/monolog": "^3.0",
     "vlucas/phpdotenv": "^5.6"
